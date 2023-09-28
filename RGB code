@@ -1,0 +1,52 @@
+// Turn LEAD on for 2 seconds and off for 1 
+
+
+// Name LEAD VARIABLES
+int redPin = 9;
+int greenPin = 10;
+int bluePin = 11;
+
+void whiteBlink(){
+  analogWrite(redPin, 215);
+   analogWrite(greenPin, 215);
+   analogWrite(bluePin, 8);
+}
+
+void setup() {
+ // set up LEaD AS OUTPUT
+ pinMode(redPin,OUTPUT);
+ pinMode(greenPin,OUTPUT);
+ pinMode(bluePin,OUTPUT);
+
+}
+
+void loop() {
+   //Turn LEAD on.
+   analogWrite(redPin, 73);
+   analogWrite(greenPin, 164);
+   analogWrite(bluePin, 109);
+   
+   // Wait  two seconds!
+   delay (2000);
+    
+    //Turn LEAD off
+   analogWrite(redPin, 200);
+   analogWrite(greenPin, 0);
+   analogWrite(bluePin, 100);
+   
+   //Delay
+   delay (500);
+   
+   analogWrite(redPin, 255);
+   analogWrite(greenPin, 255);
+   analogWrite(bluePin, 0);
+   
+   delay (1500);
+   
+   //call up White blink
+   whiteBlink();
+   
+   delay (1000);
+}
+
+   
